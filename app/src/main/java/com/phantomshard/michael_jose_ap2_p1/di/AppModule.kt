@@ -1,0 +1,10 @@
+package com.phantomshard.michael_jose_ap2_p1.di
+
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+
+@InstallIn(SingletonComponent::class)
+@Module
+object AppModule {
+}
