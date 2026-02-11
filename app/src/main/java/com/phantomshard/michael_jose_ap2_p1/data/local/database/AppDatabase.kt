@@ -2,7 +2,6 @@ package com.phantomshard.michael_jose_ap2_p1.data.local.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.phantomshard.michael_jose_ap2_p1.data.local.entities.BorrameEntity
 
 @Database(
     entities = [
