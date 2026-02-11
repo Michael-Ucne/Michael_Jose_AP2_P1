@@ -12,4 +12,5 @@ import com.phantomshard.michael_jose_ap2_p1.data.local.entities.BorrameEntity
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
+    abstract fun borrameDao(): com.phantomshard.michael_jose_ap2_p1.data.local.dao.BorrameDao
 }

@@ -23,4 +23,9 @@ object AppModule {
         ).fallbackToDestructiveMigration()
             .build()
     }
+
+    @Provides
+    fun provideBorrameDao(appDatabase: AppDatabase): com.phantomshard.michael_jose_ap2_p1.data.local.dao.BorrameDao {
+        return appDatabase.borrameDao()
+    }
 }

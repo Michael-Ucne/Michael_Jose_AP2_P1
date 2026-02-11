@@ -1,0 +1,20 @@
+# Build artifacts
+build/
+.gradle/
+app/build/
+.kotlin/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Local configuration
+local.properties
+.DS_Store
+
+# Android artifacts
+captures/
+.externalNativeBuild
+.cxx/

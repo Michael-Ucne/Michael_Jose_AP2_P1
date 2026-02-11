@@ -55,7 +55,6 @@ dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.benchmark.common)
     implementation(libs.firebase.components)
-    annotationProcessor("androidx.room:room-compiler:2.6.1")
     ksp("androidx.room:room-compiler:2.6.1")
 
 
