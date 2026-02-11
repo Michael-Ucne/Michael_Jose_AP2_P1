@@ -25,7 +25,13 @@ object AppModule {
     }
 
     @Provides
-    fun provideBorrameDao(appDatabase: AppDatabase): com.phantomshard.michael_jose_ap2_p1.data.local.dao.BorrameDao {
-        return appDatabase.borrameDao()
+    fun provideCervezaDao(appDatabase: AppDatabase): com.phantomshard.michael_jose_ap2_p1.data.local.dao.CervezaDao {
+        return appDatabase.cervezaDao()
+    }
+
+    @Provides
+    @Singleton
+    fun provideCervezaRepository(cervezaDao: com.phantomshard.michael_jose_ap2_p1.data.local.dao.CervezaDao): com.phantomshard.michael_jose_ap2_p1.domain.repository.CervezaRepository {
+        return com.phantomshard.michael_jose_ap2_p1.data.repository.CervezaRepositoryImpl(cervezaDao)
     }
 }
