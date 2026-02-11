@@ -6,11 +6,11 @@ import com.phantomshard.michael_jose_ap2_p1.data.local.entities.BorrameEntity
 
 @Database(
     entities = [
-        BorrameEntity::class
+        com.phantomshard.michael_jose_ap2_p1.data.local.entities.CervezaEntity::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun borrameDao(): com.phantomshard.michael_jose_ap2_p1.data.local.dao.BorrameDao
+    abstract fun cervezaDao(): com.phantomshard.michael_jose_ap2_p1.data.local.dao.CervezaDao
 }
