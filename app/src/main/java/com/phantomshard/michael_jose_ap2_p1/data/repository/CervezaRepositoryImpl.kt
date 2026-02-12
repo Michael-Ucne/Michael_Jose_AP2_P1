@@ -12,19 +12,19 @@ import javax.inject.Inject
 class CervezaRepositoryImpl @Inject constructor(
     private val cervezaDao: CervezaDao
 ) : CervezaRepository {
-    override suspend fun upsert(cerveza: Cerveza) {
-        cervezaDao.upsert(cerveza.toCervezaEntity())
+    override suspend fun save(cerveza: Cerveza) {
+        cervezaDao.save(cerveza.toCervezaEntity())
     }
 
     override suspend fun delete(cerveza: Cerveza) {
         cervezaDao.delete(cerveza.toCervezaEntity())
     }
 
-    override suspend fun getCerveza(id: Int): Cerveza? {
+    override suspend fun find(id: Int): Cerveza? {
         return cervezaDao.find(id)?.toCerveza()
     }
 
-    override fun getAllCervezas(): Flow<List<Cerveza>> {
+    override fun getAll(): Flow<List<Cerveza>> {
         return cervezaDao.getAll().map { list ->
             list.map { it.toCerveza() }
         }
