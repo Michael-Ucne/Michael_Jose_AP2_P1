@@ -8,7 +8,5 @@ import javax.inject.Inject
 class GetCervezasUseCase @Inject constructor(
     private val repository: CervezaRepository
 ) {
-    operator fun invoke(): Flow<List<Cerveza>> {
-        return repository.getAllCervezas()
-    }
+    operator fun invoke(): Flow<List<Cerveza>> = repository.getAll()
 }
