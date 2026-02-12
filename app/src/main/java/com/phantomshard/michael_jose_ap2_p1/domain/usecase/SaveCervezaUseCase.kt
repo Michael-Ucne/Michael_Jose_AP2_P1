@@ -7,7 +7,5 @@ import javax.inject.Inject
 class SaveCervezaUseCase @Inject constructor(
     private val repository: CervezaRepository
 ) {
-    suspend operator fun invoke(cerveza: Cerveza) {
-        repository.upsert(cerveza)
-    }
+    suspend operator fun invoke(cerveza: Cerveza) = repository.save(cerveza)
 }
